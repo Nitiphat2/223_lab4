@@ -10,9 +10,8 @@ int main()
     for(i=0; i<n; i++)
     {
         m[a]=0;
-        scanf(" %s",&num);
+        scanf(" %s",num);
         j=strlen(num);
-
         if(!strcmp(num,"+"))
         {
             m[a-2]=m[a-2]+m[a-1];
