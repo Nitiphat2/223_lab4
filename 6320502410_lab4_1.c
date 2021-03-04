@@ -24,13 +24,13 @@ int main()
         if(max < m[i])
         {
             max = m[i];
-            j=i+1;
+            j=i;
         }
         if(less > m[i])
         {
             less = m[i];
-            k=i+1;
+            k=i;
         }
     }
-    printf("%d %d",j,k);
+    printf("%d %d",j+1,k+1);
 }
