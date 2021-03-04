@@ -10,18 +10,18 @@ int main()
     o=strtok(m," ");
     while(o!=NULL)
     {
+        k=0;
         for(j=0;j<11;j++)
         {
-            if(strcmp(o,n[j]))
+            if(!strcmp(o,n[j]))
             {
-                k=1;
+                k++;
             }
         }
-        if(i==0||k!=1)
+        if(i==0||k==0)
         {
             printf("%c",toupper(o[0]));
         }
-        k=0;
         o=strtok(NULL," ");
         i++;
     }
