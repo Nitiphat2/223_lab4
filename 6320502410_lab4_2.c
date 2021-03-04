@@ -3,7 +3,7 @@
 #include<math.h>
 int main()
 {
-    int n,i,j,l,a=0;
+    int n,i,j,l,a=0,b;
     scanf("%d",&n);
     char num[n],s[n];
     int m[n];
@@ -31,13 +31,20 @@ int main()
         {
             for(l=0; l<j; l++)
             {
-                m[a] = m[a]+((num[l] - 48) * pow(10,j-l-1));
+                b = j-l-1;
+                switch(b)
+                {
+                    case 0 : m[a] = m[a]+(num[l] - 48); break;
+                    case 1 : m[a] = m[a]+(num[l] - 48) * 10; break;
+                    case 2 : m[a] = m[a]+(num[l] - 48) * 100; break;
+                    case 3 : m[a] = m[a]+(num[l] - 48) * 1000; break;
+                    case 4 : m[a] = m[a]+(num[l] - 48) * 10000; break;
+                    case 5 : m[a] = m[a]+(num[l] - 48) * 100000; break;
+
+                }
             }
             a++;
         }
     }
-    for(i=0;i<a;i++)
-    {
-        printf("%d\n",m[i]);
-    }
+    printf("%d\n",m[0]);
 }
