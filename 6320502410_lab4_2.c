@@ -14,17 +14,17 @@ int main()
         j=strlen(num);
         if(j==1)
         {
-            if(strcmp(num,"+"))
+            if(!strcmp(num,"+"))
             {
                 m[a-2]=m[a-2]+m[a-1];
                 a--;
             }
-            else if(strcmp(num,"-"))
+            else if(!strcmp(num,"-"))
             {
                 m[a-2]=m[a-2]-m[a-1];
                 a--;
             }
-            else if(strcmp(num,"*"))
+            else if(!strcmp(num,"*"))
             {
                 m[a-2]=m[a-2]*m[a-1];
                 a--;
@@ -39,7 +39,7 @@ int main()
         {
             for(l=0;l<j;l++)
             {
-                m[a] = m[a]+(((int)num[l] - 48) * pow(10,j-l));
+                m[a] = m[a]+(((int)num[l] - 48) * pow(10,j-l-1));
             }
             a++;
         }
