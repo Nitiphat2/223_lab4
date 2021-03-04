@@ -5,12 +5,13 @@ int main()
     int n,j,i,k;
     scanf("%d",&n);
     char play[50];
-    for(i=0;i<n;i++)
+    int w[4]= {1,0,0,0},p,h;
+    for(i=0; i<n; i++)
     {
-        int w[4]={1,0,0,0},p,h;
+        w[0]=1;
         scanf(" %s",play);
         k=strlen(play);
-        for(j=0;j<k;j++)
+        for(j=0; j<k; j++)
         {
             if(play[j]=='A')
             {
@@ -51,13 +52,14 @@ int main()
                 w[1] = w[2];
                 w[2] = p;
             }
-            for(j=0;j<4;j++)
+        }
+        for(h=0;h<4;h++)
+        {
+            if(w[h]==1)
             {
-                if(w[j]==1)
-                {
-                    printf("%d\n",j+1);
-                }
+                printf("%d\n",h+1);
             }
+            w[h]=0;
         }
     }
 }
