@@ -3,7 +3,7 @@
 int main()
 {
     char name[200];
-    gets(name);
+    scanf("%s",name);
     int i,j=0,k;
     i=strlen(name);
     while(j<i)
