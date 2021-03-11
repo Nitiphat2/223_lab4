@@ -12,17 +12,17 @@ int main()
         m[a]=0;
         scanf(" %s",num);
         j=strlen(num);
-        if(!strcmp(num,"+"))
+        if(!(strcmp(num,"+")))
         {
             m[a-2]=m[a-2]+m[a-1];
             a--;
         }
-        else if(!strcmp(num,"-"))
+        else if(!(strcmp(num,"-")))
         {
             m[a-2]=m[a-2]-m[a-1];
             a--;
         }
-        else if(!strcmp(num,"*"))
+        else if(!(strcmp(num,"*")))
         {
             m[a-2]=m[a-2]*m[a-1];
             a--;
@@ -40,7 +40,6 @@ int main()
                     case 3 : m[a] = m[a]+(num[l] - 48) * 1000; break;
                     case 4 : m[a] = m[a]+(num[l] - 48) * 10000; break;
                     case 5 : m[a] = m[a]+(num[l] - 48) * 100000; break;
-
                 }
             }
             a++;
